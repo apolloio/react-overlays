@@ -24,6 +24,13 @@ class Overlay extends React.Component {
     }
   }
 
+  handleClick = (event) => {
+    alert('hi');
+    event.stopPropagation();
+    event.preventDefault();
+    return false;
+  }
+
   render() {
     let {
         container
@@ -45,6 +52,10 @@ class Overlay extends React.Component {
     }
 
     let child = children;
+
+    child = <div onClick={this.handleClick}>
+      {child}
+    </div>
 
     // Position is be inner-most because it adds inline styles into the child,
     // which the other wrappers don't forward correctly.
