@@ -24,13 +24,6 @@ class Overlay extends React.Component {
     }
   }
 
-  handleChildClick = (event) => {
-    alert('hi');
-    event.stopPropagation();
-    event.preventDefault();
-    return false;
-  }
-
   render() {
     let {
         container
@@ -53,7 +46,7 @@ class Overlay extends React.Component {
 
     let child = children;
 
-    child = <div onClick={this.handleChildClick}>
+    child = <div>
       {child}
     </div>
 
