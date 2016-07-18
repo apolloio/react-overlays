@@ -24,7 +24,7 @@ class Overlay extends React.Component {
     }
   }
 
-  handleClick = (event) => {
+  handleChildClick = (event) => {
     alert('hi');
     event.stopPropagation();
     event.preventDefault();
@@ -53,7 +53,7 @@ class Overlay extends React.Component {
 
     let child = children;
 
-    child = <div onClick={this.handleClick}>
+    child = <div onClick={this.handleChildClick}>
       {child}
     </div>
 
